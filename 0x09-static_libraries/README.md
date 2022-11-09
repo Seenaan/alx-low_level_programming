@@ -1,1 +1,1 @@
-0x09-static_libraries
+tatic_librariesi0x09-static_libraries
