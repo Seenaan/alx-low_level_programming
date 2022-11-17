@@ -1,31 +1,29 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - fun pointer
- * @s: the operator given by the user
- * Return: pointer to the fun
+ * get_op_func - selects the correct fun to perform the op
+ * @s: char op
+ * Return: pointer to the function that corresponds to the fun
  */
 
-int (*get_op_func(char *s))(int, int)
+int(*get_op_func(char *s))(int, int)
 {
-	 op_t ops[] = {
-		  {"+", op_add},
-		  {"-", op_sub},
-		  {"*", op_mul},
-		  {"/", op_div},
-		  {"%", op_mod},
-		  {NULL, NULL}
-	 };
-	 int i;
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i = 0;
 
-	 i = 0;
+	while (i < 10)
+	{
+		if (s[o] == ops->op[i])
+			break;
+		i++;
+	}
 
-	 while (ops[i].op)
-	 {
-		 if (strcmp(ops[i].op, s) == 0)
-			 retun (ops[i].f);
-		 i++;
-	 }
-
-	 return (NULL);
+	return (ops[i / 2].f);
 }
