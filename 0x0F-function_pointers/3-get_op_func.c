@@ -8,6 +8,7 @@
 
 int(*get_op_func(char *s))(int, int)
 {
+
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -20,7 +21,7 @@ int(*get_op_func(char *s))(int, int)
 
 	while (i < 10)
 	{
-		if (s[o] == ops->op[i])
+		if (s[0] == ops->op[i])
 			break;
 		i++;
 	}
