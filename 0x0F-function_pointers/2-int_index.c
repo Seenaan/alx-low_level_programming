@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include "function_pointers.h"
-
 /**
  * int_index - searches for an integer
  * @array: array to search
- * @size: size 
+ * @size: size
  * @cmp: pointer to the comparing fun
  * Return: 0 or -1 if no match is found or size is neg
  */
