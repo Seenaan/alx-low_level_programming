@@ -5,7 +5,7 @@
  * read_textfile - reads a text file and prints it to the standard output.
  * @filename: text file being read
  * @letters: number of letters to be read
- * Return: the actual number of letters it could read and print
+ * Return: a - actual number of letters it could read and print
  * 0 whwn function fails or filename is NULL
  */
 
@@ -16,12 +16,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t a;
 	ssize_t b;
 
-	fd = open(filename, RDONLY);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
 	buf = malloc(sizeof(char) * letters);
 	b = read(fd, buf, letters);
-	a = write(STDOUT_POSIX, BUF, B);
+	a = write(STDOUT_FILENO, buf, b);
 
 	free(buf);
 	close(fd);
